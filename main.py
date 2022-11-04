@@ -1,20 +1,20 @@
-# # Task 1
-#
-# import requests
-#
-# def superhero():
-#     url = 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json'
-#     response = requests.get(url)
-#     heroes = response.json()
-#     heroes_dict = {}
-#     for hero in heroes:
-#         if hero['name'] in ['Hulk', 'Captain America', 'Thanos']:
-#             heroes_dict[hero['name']] = hero['powerstats']['intelligence']
-#     most_intelligence = max(heroes_dict)
-#     print(f'{most_intelligence} - {heroes_dict[most_intelligence]}')
-#
-# if __name__ == '__main__':
-#     superhero()
+# Task 1
+
+import requests
+
+def superhero():
+    url = 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json'
+    response = requests.get(url)
+    heroes = response.json()
+    heroes_dict = {}
+    for hero in heroes:
+        if hero['name'] in ['Hulk', 'Captain America', 'Thanos']:
+            heroes_dict[hero['name']] = hero['powerstats']['intelligence']
+    most_intelligence = max(heroes_dict)
+    print(f'{most_intelligence} - {heroes_dict[most_intelligence]}')
+
+if __name__ == '__main__':
+    superhero()
 
 # Task 2
 import requests
